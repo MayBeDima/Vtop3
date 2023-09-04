@@ -23,6 +23,10 @@ body {
   background: var(--mainBack);
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 * {
   color: var(--white);
   box-sizing: border-box;
@@ -831,13 +835,16 @@ a {
     padding: 96px 15px 40px 15px;
     background: var(--mainBack);
     z-index: 10;
+    transition-property: visibility, transform;
+    transition-duration: .5s;
+    transition-timing-function: ease;
     transform: translateX(-100vw);
-    display: none;
+    visibility: hidden;
   }
 
   .nav__tablet-active {
     transform: none;
-    display: block;
+    visibility: visible;
   }
 
   .nav__list {
@@ -867,6 +874,10 @@ a {
     line-height: 24px;
   }
 
+  .log-in-btn {
+    background: #1E1231;
+  }
+
   .btn-lang {
     display: inline-flex;
     justify-content: center;
@@ -888,8 +899,49 @@ a {
   }
 
   .burger {
+    position: relative;
     width: 21px;
     height: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .burger-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--white);
+    left: 0;
+    transition: .5s;
+  }
+
+  .burger-top {
+    top: 0;
+
+  }
+
+  .burger-middle {
+    top: 6px;
+  }
+
+  .burger-bottom {
+    bottom: 0;
+  }
+
+  .burger-top.anim {
+    transform-origin: center center;
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .burger-bottom.anim {
+    transform-origin: center center;
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .burger-middle.anim {
+    opacity: 0;
   }
 
   .footer {
@@ -914,6 +966,10 @@ a {
     padding: 110px 10px 40px 10px;
   }
 
+  .nav__list {
+    width: 100%;
+  }
+
   .nav__item {
     width: 100%;
     margin-right: 0;
@@ -921,6 +977,10 @@ a {
 
   .last-nav-item {
     margin-bottom: 30px !important;
+  }
+
+  .main {
+    padding-bottom: 70px;
   }
 
   .main__title {
@@ -950,10 +1010,6 @@ a {
     z-index: 15;
   }
 
-  .main {
-    padding-bottom: 70px;
-  }
-
   .main__title {
     font-size: 46px;
     line-height: 50px;
@@ -968,6 +1024,10 @@ a {
     padding: 20px 0;
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .animation-box {
+    padding-left: 63px;
   }
 
   .animation-item {
@@ -1118,17 +1178,17 @@ a {
   }
 
   .simplebar-track.simplebar-vertical {
-  top: 60px;
-  right: -10px;
-  width: 4px;
-  height: 300px;
-  border-radius: 2px;
-}
+    top: 60px;
+    right: -10px;
+    width: 4px;
+    height: 300px;
+    border-radius: 2px;
+  }
 
-.simplebar-scrollbar {
-  width: 100%;
-  border-radius: 2px;
-}
+  .simplebar-scrollbar {
+    width: 100%;
+    border-radius: 2px;
+  }
 
   .blog__text {
     max-width: 300px;
