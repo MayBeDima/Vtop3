@@ -16,10 +16,14 @@ btnLang.addEventListener('click', () => {
 // BURGER MENU
 
 const btnBurger = document.getElementById('btn-burger');
+const burgerLines = document.querySelectorAll('.burger-line');
 const nav = document.querySelector('.nav');
 
 btnBurger.addEventListener('click', () => {
   nav.classList.toggle('nav__tablet-active');
+  burgerLines.forEach((e) => {
+    e.classList.toggle('anim');
+  });
 })
 
 // ANIMATION BLOCK
@@ -79,5 +83,3 @@ function addAnimation() {
 }
 
 setInterval(addAnimation, 3000);
-
-
