@@ -593,7 +593,6 @@ a {
 
 .footer-light {
   position: absolute;
-  bottom: 0;
   right: -100px;
   bottom: -100px;
   width: 574px;
@@ -602,7 +601,6 @@ a {
   background: #478BF9;
   opacity: 0.1;
   filter: blur(50px);
-  transform: rotate(-54.31deg);
   z-index: -1;
 }
 
@@ -1026,6 +1024,15 @@ a {
     line-height: 22px;
   }
 
+  .main__banner-light {
+    top: -100px;
+    left: 100px;
+    width: 81px;
+    height: 466px;
+    opacity: 0.5;
+    filter: blur(50px);
+  }
+
   .animation-box {
     padding-left: 63px;
   }
@@ -1244,5 +1251,14 @@ a {
 
   .social__item svg {
     height: 40%;
+  }
+
+  .footer-light {
+    right: -100px;
+    bottom: 150px;
+    width: 240px;
+    height: 240px;
+    background: #478BF9;
+    opacity: 0.3;
   }
 }
